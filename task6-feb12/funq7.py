@@ -4,6 +4,8 @@ Sample Items : green-red-yellow-black-white
 Expected Result : black-green-red-white-yellow
 '''
 
+def sort_sequence(sequence): 
+    result_sequence = '-'.join(sorted(input_sequence.split('-')))
+    return result_sequence
 input_sequence = input("Enter hyphen-separated sequence of words: ")
-result_sequence = '-'.join(sorted(input_sequence.split('-')))
-print("Sorted Result:", result_sequence)
+print(sort_sequence(input_sequence))
