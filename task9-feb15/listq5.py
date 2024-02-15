@@ -2,7 +2,5 @@
 	list = [24,34,54,45]'''
 
 list = [24, 34, 54, 45]
-new_list = []
-for num in list:
-    new_list.append(num + 6)
-print(new_list)
+result=[i+6 for i in list]
+print("new list by adding 6 to each item is",result)
