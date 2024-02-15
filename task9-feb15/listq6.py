@@ -2,8 +2,5 @@
 	lst1=[2, 4, 6, 8, 10, 12, 14]'''
 
 list = [2, 4, 6, 8, 10, 12, 14]
-new_list = []
-for num in list:
-    if num**2 > 50:
-        new_list.append(num**2)
-print(new_list)
+square_greater_than_50 = [x ** 2 for x in list if x ** 2 > 50]
+print(square_greater_than_50)
