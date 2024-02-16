@@ -8,6 +8,7 @@ def count_letters(input_string):
             char_lower = char.lower()  
             letter_counts[char_lower] = letter_counts.get(char_lower, 0) + 1
     return letter_counts
-string = input('enter a string: ')
-result = count_letters(string)
-print(result)
+while 1:
+    string = input('enter a string: ')
+    result = count_letters(string)
+    print(result)
