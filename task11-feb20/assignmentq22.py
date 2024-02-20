@@ -4,8 +4,8 @@
 n=int(input("enter a num: "))
 def is_perfect(number):
     sum=0
-    for i in range(1,n):
-        if n%i==0:
+    for i in range(1,number):
+        if number%i==0:
             sum=sum+i
     return sum==number
 if is_perfect(n):
