@@ -36,25 +36,26 @@ print('6.exponentiation')
 print('7.floor_div')
 print('8.exit')
 
-num1=float(input("enter a num1: "))
-num2=float(input("enter a num2: "))
 while 1:
     choice=input("enter u r choice: ")
     if choice=='8':
         print('enter a valid choice!! or exit')
-        break  
-    if choice=='1':
-        print(addition(num1,num2))
-    elif choice=='2':
-        print(subtraction(num1,num2))
-    elif choice=='3':
-        print(multiplication(num1,num2))
-    elif choice=='4':
-        print(division(num1,num2))
-    elif choice=='5':
-        print(modulus(num1,num2))
-    elif choice=='6':
-        print(exponentiation(num1,num2))
-    elif choice=='7':
-        print(floor_division(num1,num2))
+        break
+    else:
+        num1=float(input("enter a num1: "))
+        num2=float(input("enter a num2: "))
+        if choice=='1':
+            print(addition(num1,num2))
+        elif choice=='2':
+            print(subtraction(num1,num2))
+        elif choice=='3':
+            print(multiplication(num1,num2))
+        elif choice=='4':
+            print(division(num1,num2))
+        elif choice=='5':
+            print(modulus(num1,num2))
+        elif choice=='6':
+            print(exponentiation(num1,num2))
+        elif choice=='7':
+            print(floor_division(num1,num2))
    
