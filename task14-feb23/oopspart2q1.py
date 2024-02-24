@@ -81,11 +81,11 @@ while 1:
             print(f"Area of Square: {square.area()}")
         elif ch=='3':
             d=float(input('enter side of pentagon: '))
-            pentagon = Pentagon(side=7)
+            pentagon = Pentagon(side=d)
             print(f"Area of Pentagon: {pentagon.area()}")
         elif ch=='4':
             r=float(input('enter radius of circle: '))
-            circle = Circle(radius=3)
+            circle = Circle(radius=r)
             print(f"Area of Circle: {circle.area()}")
 
 
