@@ -50,11 +50,11 @@ e1.update_salary(hours=int(input("enter the working hr: ")))
 e2 = Employee(name=input("enter emp2 name: "))
 e2.update_salary(hours=int(input("enter the working hr: ")))
 
-p1 = PartTimeEmployee(name=input("enter emp3 name: "))
+p1 = PartTimeEmployee(name=input("enter part_emp1 name: "))
 p1.update_salary(hours=int(input("enter the working hr: ")))
-p2 = PartTimeEmployee(name=input("enter emp1 name: "))
+p2 = PartTimeEmployee(name=input("enter part_emp2 name: "))
 p2.update_salary(hours=int(input("enter the working hr: ")))
-p3 = PartTimeEmployee(name=input("enter emp1 name: "))
+p3 = PartTimeEmployee(name=input("enter part_emp3 name: "))
 p3.update_salary(hours=int(input("enter the working hr: ")))
 
 
