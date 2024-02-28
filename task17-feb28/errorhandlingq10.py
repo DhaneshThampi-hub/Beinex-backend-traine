@@ -20,10 +20,17 @@ try:
     initial_balance = float(input("Enter initial balance: "))
     account = BankAccount(initial_balance)
     while True:
-        print("\nCurrent balance:", account.balance)
-        withdrawal_amount = float(input("Enter withdrawal amount: "))
-        withdrawn = account.withdraw(withdrawal_amount)
-        print("Withdrawn amount:", withdrawn)
+        ch=input('enter a choice: ')
+        if ch=='1':
+            print("\nCurrent balance:", account.balance)
+            withdrawal_amount = float(input("Enter withdrawal amount: "))
+            withdrawn = account.withdraw(withdrawal_amount)
+            print("Withdrawn amount:", withdrawn)
+            print("\nCurrent balance:", account.balance)
+        elif ch=='2':
+            print("\nCurrent balance:", account.balance)
+            print('exit')
+            break
 except ValueError:
     print("Invalid input! Please enter a valid number.")
 except NegativeBalanceError as e:
