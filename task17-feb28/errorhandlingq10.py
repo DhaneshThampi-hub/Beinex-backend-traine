@@ -20,6 +20,8 @@ try:
     initial_balance = float(input("Enter initial balance: "))
     account = BankAccount(initial_balance)
     while True:
+        print('1.widraw')
+        print('2.exit')
         ch=input('enter a choice: ')
         if ch=='1':
             print("\nCurrent balance:", account.balance)
