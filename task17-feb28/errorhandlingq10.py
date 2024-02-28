@@ -2,6 +2,7 @@
 with a starting balance,withdraw funds, and handle
  a custom exception called NegativeBalanceError when the account balance goes below zero.'''
 
+
 class NegativeBalanceError(Exception):
     pass
  
@@ -17,7 +18,8 @@ class BankAccount:
  
 # Example usage
 try:
-    initial_balance = float(input("Enter initial balance: "))
+    initial_balance =125000350
+    print(f'balance:{initial_balance}')
     account = BankAccount(initial_balance)
     while True:
         print('1.widraw')
