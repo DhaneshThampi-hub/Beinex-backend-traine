@@ -4,33 +4,27 @@ with a starting balance,withdraw funds, and handle
 
 class NegativeBalanceError(Exception):
     pass
-
+ 
 class BankAccount:
     def __init__(self, initial_balance):
-        if initial_balance < 0:
-            raise NegativeBalanceError("Initial balance cannot be negative.")
         self.balance = initial_balance
-
+ 
     def withdraw(self, amount):
-        if amount < 0:
-            raise ValueError("Withdrawal amount cannot be negative.")
-        
-        if self.balance - amount < 0:
-            raise NegativeBalanceError("Insufficient funds to make the withdrawal.")
-        
+        if amount > self.balance:
+            raise NegativeBalanceError("Insufficient funds: Cannot withdraw more than the available balance.")
         self.balance -= amount
-        print(f"Withdrawal successful. Remaining balance: {self.balance}")
-
-if __name__ == "__main__":
-    try:
-        # Example usage
-        initial_balance = float(input("Enter the initial balance: "))
-        account = BankAccount(initial_balance)
-
-        withdraw_amount = float(input("Enter the withdrawal amount: "))
-        account.withdraw(withdraw_amount)
-
-    except ValueError as ve:
-        print(f"Error: {ve}")
-    except NegativeBalanceError as nbe:
-        print(f"Error: {nbe}")
+        return amount
+ 
+# Example usage
+try:
+    initial_balance = float(input("Enter initial balance: "))
+    account = BankAccount(initial_balance)
+    while True:
+        print("\nCurrent balance:", account.balance)
+        withdrawal_amount = float(input("Enter withdrawal amount: "))
+        withdrawn = account.withdraw(withdrawal_amount)
+        print("Withdrawn amount:", withdrawn)
+except ValueError:
+    print("Invalid input! Please enter a valid number.")
+except NegativeBalanceError as e:
+    print("Error:", e)
