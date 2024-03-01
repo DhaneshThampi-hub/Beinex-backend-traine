@@ -1,4 +1,4 @@
-"""2.Write a Python program input and add two integers only and handle the 
+"""22.Write a Python program input and div two integers only and handle the 
 exceptions.
 RUN 1:
 Enter First Value: 10
@@ -14,7 +14,7 @@ Enter Second Value: 0
 Second Number Should Not Be Zero division by zero"""
 
 
-def add_two_integers():
+def div_two_integers():
     while True:
         try:
             first_value = int(input("Enter First Value: "))
@@ -45,4 +45,4 @@ def add_two_integers():
 
 
 # Example usage:
-add_two_integers()
+div_two_integers()
