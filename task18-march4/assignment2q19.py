@@ -56,38 +56,4 @@ while True:
         print("Invalid choice. Please enter a number between 1 and 3.")
 
 
-# class MenuItem:
-#     def __init__(self, name, description, price):
-#         self.name = name
-#         self.description = description
-#         self.price = price
 
-# class RestaurantMenu:
-#     def __init__(self):
-#         self.menu_items = []
-
-#     def add_menu_item(self, menu_item):
-#         self.menu_items.append(menu_item)
-
-#     def display_menu(self):
-#         if not self.menu_items:
-#             print("No items in the menu.")
-#         else:
-#             print("Restaurant Menu:")
-#             for item in self.menu_items:
-#                 print(f"{item.name} - {item.description} - ${item.price:.2f}")
-
-# # Example usage:
-# menu = RestaurantMenu()
-
-# # Adding items to the menu
-# item1 = MenuItem("Spaghetti Bolognese", "Classic Italian pasta dish", 12.99)
-# item2 = MenuItem("Chicken Caesar Salad", "Fresh lettuce with grilled chicken", 9.99)
-# item3 = MenuItem("Cheeseburger", "Juicy beef patty with cheese", 8.49)
-
-# menu.add_menu_item(item1)
-# menu.add_menu_item(item2)
-# menu.add_menu_item(item3)
-
-# # Displaying the menu
-# menu.display_menu()
