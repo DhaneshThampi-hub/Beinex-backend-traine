@@ -1,4 +1,4 @@
-"""Write a Python function called calculate_discounted_price that takes the 
+"""11.Write a Python function called calculate_discounted_price that takes the 
 original price of an item and a discount percentage as input. The function 
 should return the discounted price after applying the discount. Ensure that 
 the function handles the case where the discount percentage is negative 
