@@ -1,23 +1,22 @@
-# main_program
-from assignment2q20part1 import get_valid_input
-
-# Example usage of the input_handler library
+# Import the necessary functions from the assignment2q20part1 module
+import assignment2q20part1
 
 def main():
-    # Get a valid integer input with custom prompt and error message
-    age = get_valid_input("Enter your age: ", int, "Age must be a valid integer.", lambda x: x >= 0)
+    # Example using the input_handler library
+    # Get a non-empty string input for the user's name
+    name = assignment2q20part1.get_non_empty_string("Enter your name: ")
 
-    # Get a valid floating-point input with custom prompt and error message
-    height = get_valid_input("Enter your height (in meters): ", float, "Height must be a valid number.", lambda x: x > 0)
+    # Get an integer input for the user's age
+    age = assignment2q20part1.get_integer_input("Enter your age: ")
 
-    # Get a valid string input with custom prompt
-    name = get_valid_input("Enter your name: ", str)
+    # Get a floating-point input for the user's height in meters
+    height = assignment2q20part1.get_float_input("Enter your height in meters: ")
 
-    # Display the entered values
-    print("\nUser Information:")
-    print(f"Name: {name}")
+    # Display the collected information
+    print(f"\nName: {name}")
     print(f"Age: {age}")
     print(f"Height: {height} meters")
 
 if __name__ == "__main__":
+    # Call the main function if the script is executed directly
     main()
