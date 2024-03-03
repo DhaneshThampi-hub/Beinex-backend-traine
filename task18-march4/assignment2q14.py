@@ -22,6 +22,7 @@ class Notes:
 
     @classmethod
     def write(cls):
+        # Class method to overwrite the file with user input
         content = input("Enter your note to overwrite the file: ")
         with open(cls.FILE_NAME, "w") as file:
             file.write(content)
@@ -29,6 +30,7 @@ class Notes:
 
     @classmethod
     def append(cls):
+        # Class method to append user input to the file
         content = input("Enter your note to append to the file: ")
         with open(cls.FILE_NAME, "a") as file:
             file.write(content + "\n")
@@ -36,6 +38,7 @@ class Notes:
 
     @classmethod
     def read(cls):
+        # Class method to read the contents of the file
         try:
             with open(cls.FILE_NAME, "r") as file:
                 return file.read()
@@ -55,17 +58,22 @@ def main():
         choice = input("Enter your choice (1-4): ")
 
         if choice == "1":
+            # Overwrite the file with a new note
             Notes.write()
         elif choice == "2":
+            # Append a new note to the existing file
             Notes.append()
         elif choice == "3":
+            # Read and display the notes from the file
             notes_content = Notes.read()
             print("Notes:")
             print(notes_content)
         elif choice == "4":
+            # Exit the program
             print("Exiting the program.")
             break
         else:
+            # Handle invalid choices
             print("Invalid choice. Please enter a number between 1 and 4.")
 
 
