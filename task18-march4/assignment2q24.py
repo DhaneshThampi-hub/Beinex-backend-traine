@@ -33,13 +33,13 @@ def determine_winner(user_choice, computer_choice):
         return "Computer wins!"
 
 
-def play_game():
-    print("\nLet's play Rock, Paper, Scissors!")
+def play_game(player_name):
+    print(f"\nLet's play Rock, Paper, Scissors, {player_name}!")
 
     user_choice = get_user_choice()
     computer_choice = get_computer_choice()
 
-    print(f"\nYou chose: {user_choice}")
+    print(f"\n{player_name} chose: {user_choice}")
     print(f"Computer chose: {computer_choice}")
 
     result = determine_winner(user_choice, computer_choice)
@@ -48,36 +48,58 @@ def play_game():
     return result
 
 
-def display_game_summary(total_rounds, user_wins, computer_wins, ties):
+def display_game_summary(
+    player_name,
+    total_rounds,
+    user_wins,
+    computer_wins,
+    ties,
+    user_score,
+    computer_score,
+):
     print("\nGame Summary:")
     print(f"Total Rounds Played: {total_rounds}")
-    print(f"You won {user_wins} rounds.")
+    print(f"{player_name} won {user_wins} rounds.")
     print(f"Computer won {computer_wins} rounds.")
     print(f"Tied {ties} rounds.")
+    print(f"Overall Score - {player_name}: {user_score}, Computer: {computer_score}")
 
 
 def main():
+    player_name = input("Enter your name: ")
     total_rounds = 0
     user_wins = 0
     computer_wins = 0
     ties = 0
+    user_score = 0
+    computer_score = 0
 
-    print("Welcome to Rock, Paper, Scissors!")
+    print(f"Welcome to Rock, Paper, Scissors, {player_name}!")
 
     while True:
-        result = play_game()
+        result = play_game(player_name)
         total_rounds += 1
 
         if "You win" in result:
             user_wins += 1
+            user_score += 1
         elif "Computer wins" in result:
             computer_wins += 1
+            computer_score += 1
         else:
             ties += 1
 
         play_again = input("\nDo you want to play again? (y/n): ").lower()
         if play_again != "y":
-            display_game_summary(total_rounds, user_wins, computer_wins, ties)
+            display_game_summary(
+                player_name,
+                total_rounds,
+                user_wins,
+                computer_wins,
+                ties,
+                user_score,
+                computer_score,
+            )
             print("\nThanks for playing! Goodbye.")
             break
 
