@@ -41,29 +41,46 @@ def get_menu_item_input():
 
 # Example usage with user-friendly features:
 menu = RestaurantMenu()
+try:
+    while True:
+        print("\nChoose an option:")
+        print("1 - Add a Menu Item")
+        print("2 - Display Menu")
+        print("3 - Exit")
 
-while True:
-    print("\nChoose an option:")
-    print("1 - Add a Menu Item")
-    print("2 - Display Menu")
-    print("3 - Exit")
+        choice = input("Enter your choice (1-3): ")
 
-    choice = input("Enter your choice (1-3): ")
+        if choice == "1":
+            # User chooses to add a menu item
+            menu_item = get_menu_item_input()
+            menu.add_menu_item(menu_item)
+            print(f"{menu_item.name} added to the menu.")
+        elif choice == "2":
+            # User chooses to display the menu
+            menu.display_menu()
+        elif choice == "3":
+            # User chooses to exit the program
+            print("Exiting the program.")
+            break
+        else:
+            # Handle invalid choices
+            print("Invalid choice. Please enter a number between 1 and 3.")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
 
-    if choice == "1":
-        # User chooses to add a menu item
-        menu_item = get_menu_item_input()
-        menu.add_menu_item(menu_item)
-        print(f"{menu_item.name} added to the menu.")
-    elif choice == "2":
-        # User chooses to display the menu
-        menu.display_menu()
-    elif choice == "3":
-        # User chooses to exit the program
-        print("Exiting the program.")
-        break
-    else:
-        # Handle invalid choices
-        print("Invalid choice. Please enter a number between 1 and 3.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
