@@ -13,12 +13,13 @@ def perform_operation_on_list(my_list, index):
 
 
 # Example usage with user-friendly features:
-my_list = [1, 2, 3, 4, 5]
+my_list = input("enter a list by commas: ").split(',')
+lst=[int(num) for num in my_list]
 
 while True:
     try:
         index = int(input("Enter the index to perform the operation: "))
-        perform_operation_on_list(my_list, index)
+        perform_operation_on_list(lst, index)
         break  # Break out of the loop if the operation is successful
     except ValueError:
         print("Error: Please enter a valid integer for the index.")
