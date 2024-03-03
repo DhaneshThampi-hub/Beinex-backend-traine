@@ -94,3 +94,6 @@ if average_height:
 
 # Displaying sorted student height records
 school_records.display_sorted_records()
+
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
