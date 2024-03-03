@@ -65,35 +65,35 @@ class SchoolHeightRecord:
 
 # Example usage:
 school_records = SchoolHeightRecord()
-
+try:
 # Adding students to the record based on user input
-num_students = int(input("Enter the number of students: "))
-for i in range(num_students):
-    student_name = input("Enter student name: ")
-    student_height = float(input("Enter student height (in cm): "))
-    student = Student(student_name, student_height)
-    school_records.add_student(student)
+    num_students = int(input("Enter the number of students: "))
+    for i in range(num_students):
+        student_name = input("Enter student name: ")
+        student_height = float(input("Enter student height (in cm): "))
+        student = Student(student_name, student_height)
+        school_records.add_student(student)
 
-# Displaying student height records
-school_records.display_records()
+    # Displaying student height records
+    school_records.display_records()
 
-# Finding the tallest and shortest students
-tallest_student = school_records.find_tallest_student()
-shortest_student = school_records.find_shortest_student()
+    # Finding the tallest and shortest students
+    tallest_student = school_records.find_tallest_student()
+    shortest_student = school_records.find_shortest_student()
 
-if tallest_student:
-    print(f"Tallest Student: {tallest_student.name} ({tallest_student.height} cm)")
+    if tallest_student:
+        print(f"Tallest Student: {tallest_student.name} ({tallest_student.height} cm)")
 
-if shortest_student:
-    print(f"Shortest Student: {shortest_student.name} ({shortest_student.height} cm)")
+    if shortest_student:
+        print(f"Shortest Student: {shortest_student.name} ({shortest_student.height} cm)")
 
-# Calculating and displaying average height
-average_height = school_records.calculate_average_height()
-if average_height:
-    print(f"Average Height of Students: {average_height:.2f} cm")
+    # Calculating and displaying average height
+    average_height = school_records.calculate_average_height()
+    if average_height:
+        print(f"Average Height of Students: {average_height:.2f} cm")
 
-# Displaying sorted student height records
-school_records.display_sorted_records()
+    # Displaying sorted student height records
+    school_records.display_sorted_records()
 
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
