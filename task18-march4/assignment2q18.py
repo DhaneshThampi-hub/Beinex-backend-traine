@@ -5,18 +5,22 @@ Objects.
 
 class Student:
     def __init__(self, name, height):
+        # Initialize the Student object with a name and height
         self.name = name
         self.height = height
 
 
 class SchoolHeightRecord:
     def __init__(self):
+        # Initialize the SchoolHeightRecord object with an empty list of students
         self.students = []
 
     def add_student(self, student):
+        # Method to add a student to the record
         self.students.append(student)
 
     def display_records(self):
+        # Method to display all student height records
         if not self.students:
             print("No records found.")
         else:
@@ -25,18 +29,21 @@ class SchoolHeightRecord:
                 print(f"{student.name}: {student.height} cm")
 
     def find_tallest_student(self):
+        # Method to find the tallest student in the record
         if not self.students:
             return None
         tallest_student = max(self.students, key=lambda x: x.height)
         return tallest_student
 
     def find_shortest_student(self):
+        # Method to find the shortest student in the record
         if not self.students:
             return None
         shortest_student = min(self.students, key=lambda x: x.height)
         return shortest_student
 
     def calculate_average_height(self):
+        # Method to calculate the average height of all students
         if not self.students:
             return None
         total_height = sum(student.height for student in self.students)
@@ -44,6 +51,7 @@ class SchoolHeightRecord:
         return average_height
 
     def display_sorted_records(self):
+        # Method to display student height records sorted by height in descending order
         if not self.students:
             print("No records found.")
         else:
@@ -58,14 +66,13 @@ class SchoolHeightRecord:
 # Example usage:
 school_records = SchoolHeightRecord()
 
-# Adding students to the record
-student1 = Student("Alex", 160)
-student2 = Student("Boss", 175)
-student3 = Student("Charlie", 150)
-
-school_records.add_student(student1)
-school_records.add_student(student2)
-school_records.add_student(student3)
+# Adding students to the record based on user input
+num_students = int(input("Enter the number of students: "))
+for i in range(num_students):
+    student_name = input("Enter student name: ")
+    student_height = float(input("Enter student height (in cm): "))
+    student = Student(student_name, student_height)
+    school_records.add_student(student)
 
 # Displaying student height records
 school_records.display_records()
