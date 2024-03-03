@@ -8,6 +8,7 @@ import random
 
 
 def get_user_choice():
+    # Function to get the user's choice
     while True:
         user_input = input("Enter your choice (rock, paper, or scissors): ").lower()
         if user_input in ["rock", "paper", "scissors"]:
@@ -17,10 +18,12 @@ def get_user_choice():
 
 
 def get_computer_choice():
+    # Function to get the computer's random choice
     return random.choice(["rock", "paper", "scissors"])
 
 
 def determine_winner(user_choice, computer_choice):
+    # Function to determine the winner of the round
     if user_choice == computer_choice:
         return "It's a tie!"
     elif (
@@ -34,6 +37,7 @@ def determine_winner(user_choice, computer_choice):
 
 
 def play_game(player_name):
+    # Function to play a single round of the game
     print(f"\nLet's play Rock, Paper, Scissors, {player_name}!")
 
     user_choice = get_user_choice()
@@ -57,6 +61,7 @@ def display_game_summary(
     user_score,
     computer_score,
 ):
+    # Function to display the game summary
     print("\nGame Summary:")
     print(f"Total Rounds Played: {total_rounds}")
     print(f"{player_name} won {user_wins} rounds.")
@@ -66,7 +71,10 @@ def display_game_summary(
 
 
 def main():
-    player_name = input("Enter your name: ")
+    # Main function to run the Rock, Paper, Scissors game
+    player_name = input("Enter your name: ")  # Get the player's name
+
+    # Initialize game variables
     total_rounds = 0
     user_wins = 0
     computer_wins = 0
@@ -77,9 +85,11 @@ def main():
     print(f"Welcome to Rock, Paper, Scissors, {player_name}!")
 
     while True:
+        # Play a round of the game
         result = play_game(player_name)
         total_rounds += 1
 
+        # Update game statistics based on the result
         if "You win" in result:
             user_wins += 1
             user_score += 1
@@ -89,8 +99,10 @@ def main():
         else:
             ties += 1
 
+        # Ask if the player wants to play again
         play_again = input("\nDo you want to play again? (y/n): ").lower()
         if play_again != "y":
+            # Display the game summary when the player decides to stop
             display_game_summary(
                 player_name,
                 total_rounds,
