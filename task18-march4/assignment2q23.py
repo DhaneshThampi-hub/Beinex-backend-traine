@@ -16,11 +16,11 @@ def get_integer_input():
         try:
             user_input = input("Enter First Number: ")
             result = int(user_input)
-            print(result)
+            print(f'{result} is  an integer')
             break  # Break out of the loop if the operation is successful
 
         except ValueError:
-            print("Error: Invalid Input. Please Input an Integer.")
+            print(f"Error: Invalid Input,{user_input} is not an integer. Please Input an Integer.")
             ask_retry = input("Do you want to try again? (y/n): ").lower()
             if ask_retry != "y":
                 break
