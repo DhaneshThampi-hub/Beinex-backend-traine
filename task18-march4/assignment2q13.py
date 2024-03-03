@@ -4,38 +4,42 @@ division) on two numbers. """
 
 
 def addition(a, b):
-    return a + b
+    return a + b  # returns the sum
 
 
 def subtraction(a, b):
-    return a - b
+    return a - b  # returns the difference
 
 
 def multiplication(a, b):
-    return a * b
+    return a * b  # returns the product
 
 
 def division(a, b):
     if b != 0:
-        return a / b
+        return a / b  # returns the quotient
     else:
         return "Cannot divide by zero"
 
 
+# Main program
 print("The operations are: ")
-print("1.Add")
-print("2.sub")
-print("3.mul")
-print("4.div")
-print("5.exit")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+print("5. Exit")
+
 try:
-    num1 = float(input("enter a num1: "))
-    num2 = float(input("enter a num2: "))
-    while 1:
-        choice = input("enter u r choice: ")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    while True:
+        choice = input("Enter your choice (1-5): ")  # User choice input
         if choice == "5":
-            print("enter a valid choice!! or exit")
+            print("Exiting the program.")
             break
+
         if choice == "1":
             print(addition(num1, num2))
         elif choice == "2":
@@ -44,7 +48,14 @@ try:
             print(multiplication(num1, num2))
         elif choice == "4":
             print(division(num1, num2))
+        else:
+            print("Invalid choice. Please enter a number between 1 and 5.")
+
 except ValueError:
     print("Error: Please enter valid numeric values for numbers.")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"An unexpected error occurred: {e}")
+
+ 
