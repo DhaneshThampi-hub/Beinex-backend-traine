@@ -10,7 +10,7 @@ def main():
     age = assignment2q20part1.get_integer_input("Enter your age: ")
 
     # Get a floating-point input for the user's height in meters
-    height = assignment2q20part1.get_float_input("Enter your height in meters: ")
+    height = assignment2q20part1.get_float_input("Enter your height in centimeters: ")
 
     # Display the collected information
     print(f"\nName: {name}")
