@@ -16,6 +16,6 @@ def sort_strings_by_length(input_list):
 
 
 # Example usage:
-input_strings = input("enter a string: ").split(",")
+input_strings = input("enter a string by spaces : ").split()
 sorted_strings = sort_strings_by_length(input_strings)
 print(sorted_strings)
