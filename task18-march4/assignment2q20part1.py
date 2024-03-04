@@ -1,10 +1,6 @@
 """20.Create a Python library with the function to input the values with 
 expectation handling and demonstrate with the example"""
 
-
-
-
-
 def get_integer_input(prompt):
     """
     Get a valid integer input from the user.
