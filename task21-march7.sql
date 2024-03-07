@@ -33,7 +33,7 @@ SELECT * FROM PersonInfo WHERE Age >= 25;
 -- Scenario 2 - Select distinct cities from the table:
 SELECT DISTINCT City FROM PersonInfo;
 
--- Scenario 3 - Select first and last names for females with a Master's degree:
+-- Scenario 3 - Select first and last names for females with a Btech's degree:
 SELECT FirstName, LastName FROM PersonInfo WHERE Gender = 'Female' AND EducationLevel = 'Btech';
 
 
