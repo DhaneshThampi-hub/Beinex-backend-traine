@@ -1,5 +1,4 @@
 use beinex;
-drop table PersonInfo;
 CREATE TABLE PersonInfo (
     PersonID INT,
     FirstName VARCHAR(50),
