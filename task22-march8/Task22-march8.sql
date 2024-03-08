@@ -87,7 +87,7 @@ LIMIT 1;
 -- 15) Identify which item has maximum sales in each region.
 SELECT cm.Region, so.Item, SUM(so.Units) AS total_units_sold
 FROM customer_master AS cm
-JOIN sales_order AS so ON cm.Customer_ID = so.Customer_ID
+JOIN sales_order1 AS so ON cm.Customer_ID = so.Customer_ID
 GROUP BY cm.Region, so.Item
 HAVING SUM(so.Units) = (SELECT MAX(total_units_sold)
                         FROM (SELECT cm.Region, so.Item, SUM(so.Units) AS total_units_sold
