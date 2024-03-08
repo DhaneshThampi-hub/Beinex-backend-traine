@@ -59,7 +59,7 @@ LIMIT 1;
 -- 10) Which item has highest and lowest unit cost?
 SELECT Item, `Unit_Cost` AS max_unit_cost
 FROM sales_order1
-WHERE `Unit_Cost` = (SELECT MAX(`Unit_Cost`) FROM sales_order);
+WHERE `Unit_Cost` = (SELECT MAX(`Unit_Cost`) FROM sales_order1);
 
 SELECT Item, `Unit_Cost` AS min_unit_cost
 FROM sales_order1
